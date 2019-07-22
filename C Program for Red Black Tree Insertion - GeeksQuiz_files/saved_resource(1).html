@@ -1,0 +1,2534 @@
+<!DOCTYPE html>
+<!-- saved from url=(0422)http://disqus.com/embed/comments/?base=default&version=6202b0dcdb29e539a797dd07893bbeac&f=geeksquiz&t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&s_o=default&l= -->
+<html lang="en" dir="ltr" class="js no-touch localstorage sessionstorage contenteditable use-opacity-transitions"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Disqus Comments</title>
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <style>
+        .alert--warning {
+            border-radius: 3px;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            background-color: #FFE070;
+            color: #A47703;
+        }
+
+        .alert--warning a,
+        .alert--warning a:hover,
+        .alert--warning strong {
+            color: #A47703;
+            font-weight: bold;
+        }
+
+        .alert--error p,
+        .alert--warning p {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        
+        </style>
+    
+    <style>
+        html {
+            overflow: hidden;
+        }
+
+        #error {
+            display: none;
+        }
+
+        .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        
+    </style>
+
+<link rel="stylesheet" href="./lounge.f823e173ee428a39ccb5022f896f6fd9.css"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="remote/config" src="./config.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="common.bundle" src="./common.bundle.5e9ccbe08dd874ad4d148f967f62d108.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="lounge.bundle" src="./lounge.bundle.65ce028618225eaf681e3f29c146cca8.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="ga" src="./ga(1).js"></script><style id="css_1470799451190"></style><!--<base target="_parent">--><base href="." target="_parent"><link rel="stylesheet" href="./discovery.ec9371c4ef39ecee074c2acf24d5e0e2.css"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="discovery/main" src="./discovery.bundle.40e79a6e25f6d95ea88301548969b038.js"></script></head>
+<body class="has-highlighted-post">
+    
+
+    
+    <div id="error" class="alert--error">
+        <p>We were unable to load Disqus. If you are a moderator please see our <a href="https://docs.disqus.com/help/83/"> troubleshooting guide</a>. </p>
+    </div>
+
+    
+    <script type="text/json" id="disqus-forumData">{"session":{"canModerate":false,"audienceSyncVerified":false,"mustVerify":false,"canReply":true,"mustVerifyEmail":false},"features":{},"forum":{"category":"Tech","description":"","founder":"40310485","twitterName":"","url":"http://geeksquiz.com/","raw_description":"","guidelines":null,"favicon":{"permalink":"http://disqus.com/api/forums/favicons/geeksquiz.jpg","cache":"//a.disquscdn.com/1470359843/images/favicon-default.png"},"raw_guidelines":null,"language":"en","daysThreadAlive":0,"installCompleted":false,"avatar":{"small":{"permalink":"http://disqus.com/api/forums/avatars/geeksquiz.jpg?size=32","cache":"//a.disquscdn.com/1470359843/images/noavatar32.png"},"large":{"permalink":"http://disqus.com/api/forums/avatars/geeksquiz.jpg?size=92","cache":"//a.disquscdn.com/1470359843/images/noavatar92.png"}},"channel":null,"daysAlive":0,"pk":"2118163","signedUrl":"http://disq.us/?url=http%3A%2F%2Fgeeksquiz.com%2F&key=H_-XpfXf15oZj8yP-lrrBw","settings":{"supportLevel":1,"adsDRNativeEnabled":false,"disable3rdPartyTrackers":false,"adsVideoEnabled":false,"adsProductVideoEnabled":false,"adsPositionTopEnabled":false,"ssoRequired":false,"linkAffiliationEnabled":false,"adsProductLinksThumbnailsEnabled":false,"adsProductStoriesEnabled":false,"organicDiscoveryEnabled":false,"allowMedia":false,"discoveryMax":false,"discoveryLocked":false,"moderatorText":"","adsEnabled":false,"allowAnonPost":true,"hasCustomAvatar":false,"adultContent":false,"promotedDiscoveryEnabled":false,"allowAnonVotes":false,"mustVerify":true,"colorScheme":"auto","adsSettingsLocked":false,"mustVerifyEmail":true,"audienceSyncEnabled":false,"typeface":"auto","adsPositionBottomEnabled":false,"mediaembedEnabled":false,"adsProductLinksEnabled":false,"discoveryThumbnailsEnabled":false,"isVIP":false},"id":"geeksquiz","createdAt":"2013-01-05T05:38:35.967420","name":"GeeksQuiz"}}</script>
+
+    
+    <script type="text/json" id="disqus-threadData">{"cursor":{"hasPrev":false,"prev":null,"total":20,"hasNext":false,"next":"1:0:0"},"code":0,"response":{"lastModified":1469898804,"posts":[{"forum":"geeksquiz","parent":null,"isApproved":true,"author":{"username":"disqus_zDSf2bUm4M","about":"","name":"Dinesh Khandelwal","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.207813,"profileUrl":"https://disqus.com/by/disqus_zDSf2bUm4M/","url":"","reputation":1.207813,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2014-09-13T00:31:11","id":"121769744","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/disqus_zDSf2bUm4M.jpg","cache":"//a.disquscdn.com/uploads/users/12176/9744/avatar32.jpg?1410827726"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/disqus_zDSf2bUm4M.jpg","cache":"//a.disquscdn.com/uploads/users/12176/9744/avatar92.jpg?1410827726","large":{"permalink":"http://disqus.com/api/users/avatars/disqus_zDSf2bUm4M.jpg","cache":"//a.disquscdn.com/uploads/users/12176/9744/avatar92.jpg?1410827726"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"The above code fails for many cases. Eg : 15, 8, 10, 12, 18, 25, 20.\n\nWorking C++ Code : http://ideone.com/PvEzCI\n\n[Let me know if you find any bug in the program]","createdAt":"2014-12-17T20:24:40","id":"1747314390","thread":"2898975054","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":4,"isEdited":true,"message":"\u003cp>The above code fails for many cases. Eg : 15, 8, 10, 12, 18, 25, 20.\u003c/p>\u003cp>Working C++ Code : \u003ca href=\"http://ideone.com/PvEzCI\" rel=\"nofollow\">http://ideone.com/PvEzCI\u003c/a>\u003c/p>\u003cp>[Let me know if you find any bug in the program]\u003c/p>","isSpam":false,"isHighlighted":false,"points":4},{"forum":"geeksquiz","parent":1747314390,"isApproved":true,"author":{"username":"haochen_liu","about":"","name":"Haochen Liu","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.2334269999999998,"profileUrl":"https://disqus.com/by/haochen_liu/","url":"","reputation":1.2334269999999998,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2015-11-08T18:51:36","id":"182007950","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/haochen_liu.jpg","cache":"//a.disquscdn.com/1470359843/images/noavatar32.png"},"isCustom":false,"permalink":"http://disqus.com/api/users/avatars/haochen_liu.jpg","cache":"//a.disquscdn.com/1470359843/images/noavatar92.png","large":{"permalink":"http://disqus.com/api/users/avatars/haochen_liu.jpg","cache":"//a.disquscdn.com/1470359843/images/noavatar92.png"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"Would you please provide the removal as well? Thanks!","createdAt":"2015-12-09T08:42:15","id":"2400976270","thread":"2898975054","depth":1,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>Would you please provide the removal as well? Thanks!\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"forum":"geeksquiz","parent":null,"isApproved":true,"author":{"username":"grb47","about":"","name":"wilson","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.3513089999999999,"profileUrl":"https://disqus.com/by/grb47/","url":"","reputation":1.3513089999999999,"location":"","isPrivate":true,"signedUrl":"","isPrimary":true,"joinedAt":"2015-02-20T15:30:19","id":"145292297","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/grb47.jpg","cache":"//a.disquscdn.com/uploads/users/14529/2297/avatar32.jpg?1464786177"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/grb47.jpg","cache":"//a.disquscdn.com/uploads/users/14529/2297/avatar92.jpg?1464786177","large":{"permalink":"http://disqus.com/api/users/avatars/grb47.jpg","cache":"//a.disquscdn.com/uploads/users/14529/2297/avatar92.jpg?1464786177"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"https://ideone.com/bOItb5\nafter some correction  ,in given code this one is correct code","createdAt":"2016-02-21T07:38:42","id":"2526194194","thread":"2898975054","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":1,"isEdited":false,"message":"\u003cp>\u003ca href=\"https://ideone.com/bOItb5\" rel=\"nofollow\">https://ideone.com/bOItb5\u003c/a>\u003cbr>after some correction  ,in given code this one is correct code\u003c/p>","isSpam":false,"isHighlighted":false,"points":1},{"forum":"geeksquiz","parent":null,"isApproved":true,"author":{"name":"AA","url":"","profileUrl":"","emailHash":"","avatar":{"small":{"permalink":"//a.disquscdn.com/1470359843/images/noavatar32.png","cache":"//a.disquscdn.com/1470359843/images/noavatar32.png"},"large":{"permalink":"//a.disquscdn.com/1470359843/images/noavatar92.png","cache":"//a.disquscdn.com/1470359843/images/noavatar92.png"},"permalink":"//a.disquscdn.com/1470359843/images/noavatar92.png","cache":"//a.disquscdn.com/1470359843/images/noavatar92.png"},"signedUrl":"","isAnonymous":true},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"Consider the case when Uncle is not present(NULL)...some minor changes will do...\n...................\n// (ii) Change color of grandparent as RED\n\n\t\t// (iii) Move z to grandparent\n\n\t\tif (y != NULL && y->color == 'R')\n\n\t\t{\n\n\t\t\ty->color = 'B';\n..............\n\n\nand change statements inside else block to if...else if...else if...else if...","createdAt":"2014-11-03T08:31:58","id":"1673439182","thread":"2898975054","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":1,"isEdited":false,"message":"\u003cp>Consider the case when Uncle is not present(NULL)...some minor changes will do...\u003cbr>...................\u003cbr>// (ii) Change color of grandparent as RED\u003c/p>\u003cp>\t\t// (iii) Move z to grandparent\u003c/p>\u003cp>\t\tif (y != NULL &amp;&amp; y-&gt;color == 'R')\u003c/p>\u003cp>\t\t{\u003c/p>\u003cp>\t\t\ty-&gt;color = 'B';\u003cbr>..............\u003c/p>\u003cp>and change statements inside else block to if...else if...else if...else if...\u003c/p>","isSpam":false,"isHighlighted":false,"points":1},{"forum":"geeksquiz","parent":null,"isApproved":true,"author":{"username":"disqus_AjfnriTUc7","about":"","name":"Abhishek Thakur","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.234707,"profileUrl":"https://disqus.com/by/disqus_AjfnriTUc7/","url":"","reputation":1.234707,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2016-06-01T10:54:36","id":"210107695","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/disqus_AjfnriTUc7.jpg","cache":"//a.disquscdn.com/uploads/users/21010/7695/avatar32.jpg?1464778709"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/disqus_AjfnriTUc7.jpg","cache":"//a.disquscdn.com/uploads/users/21010/7695/avatar92.jpg?1464778709","large":{"permalink":"http://disqus.com/api/users/avatars/disqus_AjfnriTUc7.jpg","cache":"//a.disquscdn.com/uploads/users/21010/7695/avatar92.jpg?1464778709"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"why are we doing the following  \npt = parent_pt\nparent_pt = pt->parent\n???\nis it just to travel up the tree to ensure it is not violating any redblack property.","createdAt":"2016-06-26T08:00:39","id":"2751088379","thread":"2898975054","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":true,"message":"\u003cp>why are we doing the following  \u003cbr>pt = parent_pt\u003cbr>parent_pt = pt-&gt;parent\u003cbr>???\u003cbr>is it just to travel up the tree to ensure it is not violating any redblack property.\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"forum":"geeksquiz","parent":2751088379,"isApproved":true,"author":{"username":"bhavikgujarati","about":"M.Tech. student at IIIT-Bangalore","name":"bhavik gujarati","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.413732,"profileUrl":"https://disqus.com/by/bhavikgujarati/","url":"","reputation":1.413732,"location":"Bangalore","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2015-12-24T09:54:47","id":"189099044","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/bhavikgujarati.jpg","cache":"//a.disquscdn.com/uploads/users/18909/9044/avatar32.jpg?1459661055"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/bhavikgujarati.jpg","cache":"//a.disquscdn.com/uploads/users/18909/9044/avatar92.jpg?1459661055","large":{"permalink":"http://disqus.com/api/users/avatars/bhavikgujarati.jpg","cache":"//a.disquscdn.com/uploads/users/18909/9044/avatar92.jpg?1459661055"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"No, it's for handling subsequent lines outside if, specifically, swapping of colors and pt = parent_pt.","createdAt":"2016-07-30T17:10:38","id":"2812143341","thread":"2898975054","depth":1,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":true,"message":"\u003cp>No, it's for handling subsequent lines outside if, specifically, swapping of colors and pt = parent_pt.\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"forum":"geeksquiz","parent":null,"isApproved":true,"author":{"username":"disqus_AjfnriTUc7","about":"","name":"Abhishek Thakur","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.234707,"profileUrl":"https://disqus.com/by/disqus_AjfnriTUc7/","url":"","reputation":1.234707,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2016-06-01T10:54:36","id":"210107695","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/disqus_AjfnriTUc7.jpg","cache":"//a.disquscdn.com/uploads/users/21010/7695/avatar32.jpg?1464778709"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/disqus_AjfnriTUc7.jpg","cache":"//a.disquscdn.com/uploads/users/21010/7695/avatar92.jpg?1464778709","large":{"permalink":"http://disqus.com/api/users/avatars/disqus_AjfnriTUc7.jpg","cache":"//a.disquscdn.com/uploads/users/21010/7695/avatar92.jpg?1464778709"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"how come this code is making new node red ??\nSince node constructor is not initializing bool color. So, how can we be sure that new node is red ??","createdAt":"2016-06-25T15:02:25","id":"2750042207","thread":"2898975054","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>how come this code is making new node red ??\u003cbr>Since node constructor is not initializing bool color. So, how can we be sure that new node is red ??\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"forum":"geeksquiz","parent":2750042207,"isApproved":true,"author":{"username":"bhavikgujarati","about":"M.Tech. student at IIIT-Bangalore","name":"bhavik gujarati","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.413732,"profileUrl":"https://disqus.com/by/bhavikgujarati/","url":"","reputation":1.413732,"location":"Bangalore","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2015-12-24T09:54:47","id":"189099044","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/bhavikgujarati.jpg","cache":"//a.disquscdn.com/uploads/users/18909/9044/avatar32.jpg?1459661055"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/bhavikgujarati.jpg","cache":"//a.disquscdn.com/uploads/users/18909/9044/avatar92.jpg?1459661055","large":{"permalink":"http://disqus.com/api/users/avatars/bhavikgujarati.jpg","cache":"//a.disquscdn.com/uploads/users/18909/9044/avatar92.jpg?1459661055"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"bool is, by default, initialized to 0 which is corresponding to \"RED\" in enum.","createdAt":"2016-07-30T17:13:07","id":"2812146427","thread":"2898975054","depth":1,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":true,"message":"\u003cp>bool is, by default, initialized to 0 which is corresponding to \"RED\" in enum.\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"forum":"geeksquiz","parent":null,"isApproved":true,"author":{"username":"shivammitra","about":"","name":"Shivam Mitra","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.273321,"profileUrl":"https://disqus.com/by/shivammitra/","url":"","reputation":1.273321,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2015-06-22T19:14:53","id":"162609206","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/shivammitra.jpg","cache":"//a.disquscdn.com/uploads/users/16260/9206/avatar32.jpg?1468677253"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/shivammitra.jpg","cache":"//a.disquscdn.com/uploads/users/16260/9206/avatar92.jpg?1468677253","large":{"permalink":"http://disqus.com/api/users/avatars/shivammitra.jpg","cache":"//a.disquscdn.com/uploads/users/16260/9206/avatar92.jpg?1468677253"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"Recursive implementation:\nhttp://ideone.com/9Hd3Mp","createdAt":"2016-06-09T20:19:19","id":"2722199769","thread":"2898975054","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>Recursive implementation:\u003cbr>\u003ca href=\"http://ideone.com/9Hd3Mp\" rel=\"nofollow\">http://ideone.com/9Hd3Mp\u003c/a>\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"forum":"geeksquiz","parent":null,"isApproved":true,"author":{"username":"geeksforgeeks","about":"","name":"GeeksforGeeks","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":6.675189,"profileUrl":"https://disqus.com/by/geeksforgeeks/","url":"","reputation":6.675189,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2013-08-03T15:57:44","id":"65619083","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/geeksforgeeks.jpg","cache":"//a.disquscdn.com/uploads/users/6561/9083/avatar32.jpg?1375548116"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/geeksforgeeks.jpg","cache":"//a.disquscdn.com/uploads/users/6561/9083/avatar92.jpg?1375548116","large":{"permalink":"http://disqus.com/api/users/avatars/geeksforgeeks.jpg","cache":"//a.disquscdn.com/uploads/users/6561/9083/avatar92.jpg?1375548116"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"@All Thanks for your inputs.  We have updated the code for insertion.","createdAt":"2016-03-02T18:07:20","id":"2547781454","thread":"2898975054","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>@All Thanks for your inputs.  We have updated the code for insertion.\u003c/p>","isSpam":false,"isHighlighted":true,"points":0},{"forum":"geeksquiz","parent":null,"isApproved":true,"author":{"username":"shashankmudlapur","about":"","name":"Shashank Mudlapur","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.232124,"profileUrl":"https://disqus.com/by/shashankmudlapur/","url":"","reputation":1.232124,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2016-03-02T06:16:15","id":"198850859","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/shashankmudlapur.jpg","cache":"//a.disquscdn.com/uploads/users/19885/859/avatar32.jpg?1456899446"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/shashankmudlapur.jpg","cache":"//a.disquscdn.com/uploads/users/19885/859/avatar92.jpg?1456899446","large":{"permalink":"http://disqus.com/api/users/avatars/shashankmudlapur.jpg","cache":"//a.disquscdn.com/uploads/users/19885/859/avatar92.jpg?1456899446"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"Code not working for ascending order or descending order insertion","createdAt":"2016-03-02T06:17:24","id":"2546848861","thread":"2898975054","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>Code not working for ascending order or descending order insertion\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"forum":"geeksquiz","parent":null,"isApproved":true,"author":{"username":"disqus_M7N39xkive","about":"","name":"rajdeep","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.233058,"profileUrl":"https://disqus.com/by/disqus_M7N39xkive/","url":"","reputation":1.233058,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2014-12-02T17:52:35","id":"134197106","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/disqus_M7N39xkive.jpg","cache":"//a.disquscdn.com/uploads/users/13419/7106/avatar32.jpg?1417542756"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/disqus_M7N39xkive.jpg","cache":"//a.disquscdn.com/uploads/users/13419/7106/avatar92.jpg?1417542756","large":{"permalink":"http://disqus.com/api/users/avatars/disqus_M7N39xkive.jpg","cache":"//a.disquscdn.com/uploads/users/13419/7106/avatar92.jpg?1417542756"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"Bug in the code:(corrected code)\ncorrections are followed by //correction comment\n http://ideone.com/Z7PoOy","createdAt":"2015-09-24T08:53:11","id":"2271117444","thread":"2898975054","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>Bug in the code:(corrected code)\u003cbr>corrections are followed by //correction comment\u003cbr> \u003ca href=\"http://ideone.com/Z7PoOy\" rel=\"nofollow\">http://ideone.com/Z7PoOy\u003c/a>\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"forum":"geeksquiz","parent":2271117444,"isApproved":true,"author":{"name":"david","url":"","profileUrl":"","emailHash":"","avatar":{"small":{"permalink":"//a.disquscdn.com/1470359843/images/noavatar32.png","cache":"//a.disquscdn.com/1470359843/images/noavatar32.png"},"large":{"permalink":"//a.disquscdn.com/1470359843/images/noavatar92.png","cache":"//a.disquscdn.com/1470359843/images/noavatar92.png"},"permalink":"//a.disquscdn.com/1470359843/images/noavatar92.png","cache":"//a.disquscdn.com/1470359843/images/noavatar92.png"},"signedUrl":"","isAnonymous":true},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"on line 136 you added a continue statement without a //correction comment","createdAt":"2016-02-15T00:16:33","id":"2513880682","thread":"2898975054","depth":1,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>on line 136 you added a continue statement without a //correction comment\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"forum":"geeksquiz","parent":null,"isApproved":true,"author":{"username":"saiyaswanth","about":"","name":"sai","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.242381,"profileUrl":"https://disqus.com/by/saiyaswanth/","url":"","reputation":1.242381,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2014-09-15T01:29:46","id":"121988825","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/saiyaswanth.jpg","cache":"//a.disquscdn.com/uploads/users/12198/8825/avatar32.jpg?1454232074"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/saiyaswanth.jpg","cache":"//a.disquscdn.com/uploads/users/12198/8825/avatar92.jpg?1454232074","large":{"permalink":"http://disqus.com/api/users/avatars/saiyaswanth.jpg","cache":"//a.disquscdn.com/uploads/users/12198/8825/avatar92.jpg?1454232074"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"in order for the code at all test cases,Just make the following modification\n\n\nif(y==NULL)\n\n            {\n\n                z->parent->color='B';\n\n                z->parent->parent->color='R';\n\n                z= z->parent->parent;\n\n            }\n\n            else if(y->color=='R')\n\n            {\n\n                y->color='B';\n\n                z->parent->color='B';\n\n                z->parent->parent->color='R';\n\n                z= z->parent->parent;\n\n            }","createdAt":"2015-07-01T18:24:17","id":"2111016174","thread":"2898975054","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>in order for the code at all test cases,Just make the following modification\u003c/p>\u003cp>if(y==NULL)\u003c/p>\u003cp>            {\u003c/p>\u003cp>                z-&gt;parent-&gt;color='B';\u003c/p>\u003cp>                z-&gt;parent-&gt;parent-&gt;color='R';\u003c/p>\u003cp>                z= z-&gt;parent-&gt;parent;\u003c/p>\u003cp>            }\u003c/p>\u003cp>            else if(y-&gt;color=='R')\u003c/p>\u003cp>            {\u003c/p>\u003cp>                y-&gt;color='B';\u003c/p>\u003cp>                z-&gt;parent-&gt;color='B';\u003c/p>\u003cp>                z-&gt;parent-&gt;parent-&gt;color='R';\u003c/p>\u003cp>                z= z-&gt;parent-&gt;parent;\u003c/p>\u003cp>            }\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"forum":"geeksquiz","parent":null,"isApproved":true,"author":{"username":"KlausMikelson","about":"","name":"Klaus","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.309895,"profileUrl":"https://disqus.com/by/KlausMikelson/","url":"","reputation":1.309895,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2013-12-23T15:23:34","id":"87632628","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/KlausMikelson.jpg","cache":"//a.disquscdn.com/uploads/users/8763/2628/avatar32.jpg?1433401539"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/KlausMikelson.jpg","cache":"//a.disquscdn.com/uploads/users/8763/2628/avatar92.jpg?1433401539","large":{"permalink":"http://disqus.com/api/users/avatars/KlausMikelson.jpg","cache":"//a.disquscdn.com/uploads/users/8763/2628/avatar92.jpg?1433401539"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"http://ideone.com/SBi3ho This is iterative code for the same.","createdAt":"2015-06-24T07:04:44","id":"2096091313","thread":"2898975054","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>\u003ca href=\"http://ideone.com/SBi3ho\" rel=\"nofollow\">http://ideone.com/SBi3ho\u003c/a> This is iterative code for the same.\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"forum":"geeksquiz","parent":null,"isApproved":true,"author":{"username":"mithunv","about":"","name":"Mithun V","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.2342629999999999,"profileUrl":"https://disqus.com/by/mithunv/","url":"","reputation":1.2342629999999999,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2013-12-23T11:52:30","id":"87611069","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/mithunv.jpg","cache":"//a.disquscdn.com/uploads/users/8761/1069/avatar32.jpg?1418812077"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/mithunv.jpg","cache":"//a.disquscdn.com/uploads/users/8761/1069/avatar92.jpg?1418812077","large":{"permalink":"http://disqus.com/api/users/avatars/mithunv.jpg","cache":"//a.disquscdn.com/uploads/users/8761/1069/avatar92.jpg?1418812077"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"The source code is not working for 3 elements , i mean any three node insertion.","createdAt":"2014-12-17T10:27:56","id":"1746424443","thread":"2898975054","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>The source code is not working for 3 elements , i mean any three node insertion.\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"forum":"geeksquiz","parent":null,"isApproved":true,"author":{"username":"mithunv","about":"","name":"Mithun V","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.2342629999999999,"profileUrl":"https://disqus.com/by/mithunv/","url":"","reputation":1.2342629999999999,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2013-12-23T11:52:30","id":"87611069","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/mithunv.jpg","cache":"//a.disquscdn.com/uploads/users/8761/1069/avatar32.jpg?1418812077"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/mithunv.jpg","cache":"//a.disquscdn.com/uploads/users/8761/1069/avatar92.jpg?1418812077","large":{"permalink":"http://disqus.com/api/users/avatars/mithunv.jpg","cache":"//a.disquscdn.com/uploads/users/8761/1069/avatar92.jpg?1418812077"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"Please insert 13 , 8 and 11. i am getting segmentation fault for this one","createdAt":"2014-12-17T09:18:48","id":"1746380013","thread":"2898975054","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>Please insert 13 , 8 and 11. i am getting segmentation fault for this one\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"forum":"geeksquiz","parent":null,"isApproved":true,"author":{"name":"Aj","url":"","profileUrl":"","emailHash":"","avatar":{"small":{"permalink":"//a.disquscdn.com/1470359843/images/noavatar32.png","cache":"//a.disquscdn.com/1470359843/images/noavatar32.png"},"large":{"permalink":"//a.disquscdn.com/1470359843/images/noavatar92.png","cache":"//a.disquscdn.com/1470359843/images/noavatar92.png"},"permalink":"//a.disquscdn.com/1470359843/images/noavatar92.png","cache":"//a.disquscdn.com/1470359843/images/noavatar92.png"},"signedUrl":"","isAnonymous":true},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"Fails for decreasing order insert....10,9,8,7,6,5,4,3,2,1","createdAt":"2014-11-03T07:08:20","id":"1673392522","thread":"2898975054","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>Fails for decreasing order insert....10,9,8,7,6,5,4,3,2,1\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"forum":"geeksquiz","parent":null,"isApproved":true,"author":{"name":"Maniak","url":"","profileUrl":"","emailHash":"","avatar":{"small":{"permalink":"//a.disquscdn.com/1470359843/images/noavatar32.png","cache":"//a.disquscdn.com/1470359843/images/noavatar32.png"},"large":{"permalink":"//a.disquscdn.com/1470359843/images/noavatar92.png","cache":"//a.disquscdn.com/1470359843/images/noavatar92.png"},"permalink":"//a.disquscdn.com/1470359843/images/noavatar92.png","cache":"//a.disquscdn.com/1470359843/images/noavatar92.png"},"signedUrl":"","isAnonymous":true},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"According to the CLRS book's algorithm, the rotate left function described in here is wrong. The correct is compare y->left with NULL and not x->left.","createdAt":"2014-10-28T02:51:54","id":"1656955421","thread":"2898975054","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>According to the CLRS book's algorithm, the rotate left function described in here is wrong. The correct is compare y-&gt;left with NULL and not x-&gt;left.\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"forum":"geeksquiz","parent":null,"isApproved":true,"author":{"username":"svnvs","about":"","name":"svnvs","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.232124,"profileUrl":"https://disqus.com/by/svnvs/","url":"","reputation":1.232124,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2014-09-23T18:32:42","id":"123064413","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/svnvs.jpg","cache":"//a.disquscdn.com/uploads/users/12306/4413/avatar32.jpg?1411497770"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/svnvs.jpg","cache":"//a.disquscdn.com/uploads/users/12306/4413/avatar92.jpg?1411497770","large":{"permalink":"http://disqus.com/api/users/avatars/svnvs.jpg","cache":"//a.disquscdn.com/uploads/users/12306/4413/avatar92.jpg?1411497770"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"There seems to a bug in the \"insert\" method when a duplicate element is passed to it. \n\n\n\nConsider the below scenario, the current tree looks like\n  3\n /\n2\nNow, when you insert 3 again, the left subtree i.e. 2 seems to be overwritten.","createdAt":"2014-09-23T18:42:49","id":"1602422509","thread":"2898975054","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>There seems to a bug in the \"insert\" method when a duplicate element is passed to it.\u003c/p>\u003cp>Consider the below scenario, the current tree looks like\u003cbr>  3\u003cbr> /\u003cbr>2\u003cbr>Now, when you insert 3 again, the left subtree i.e. 2 seems to be overwritten.\u003c/p>","isSpam":false,"isHighlighted":false,"points":0}],"thread":{"feed":"https://geeksquiz.disqus.com/c_program_for_red_black_tree_insertion/latest.rss","identifiers":["13107 http://quiz.geeksforgeeks.org/?p=13107","13107 http://geeksquiz.com/?p=13107"],"dislikes":0,"likes":4,"message":"","id":"2898975054","isDeleted":false,"category":"2150855","author":"40310485","userScore":0,"userSubscription":false,"isSpam":false,"signedLink":"http://disq.us/?url=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&key=7WX5dkZl5ELkwmshnHYNpw","createdAt":"2014-08-04T08:01:26","hasStreaming":false,"raw_message":"","isClosed":false,"link":"http://quiz.geeksforgeeks.org/c-program-red-black-tree-insertion/","slug":"c_program_for_red_black_tree_insertion","forum":"geeksquiz","clean_title":"C Program for Red Black Tree Insertion","posts":20,"moderators":[208606736,165896125,65619083,40310485,82955661],"title":"C Program for Red Black Tree Insertion","highlightedPost":{"forum":"geeksquiz","parent":null,"isApproved":true,"author":{"username":"geeksforgeeks","about":"","name":"GeeksforGeeks","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":6.675189,"profileUrl":"https://disqus.com/by/geeksforgeeks/","url":"","reputation":6.675189,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2013-08-03T15:57:44","id":"65619083","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/geeksforgeeks.jpg","cache":"//a.disquscdn.com/uploads/users/6561/9083/avatar32.jpg?1375548116"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/geeksforgeeks.jpg","cache":"//a.disquscdn.com/uploads/users/6561/9083/avatar92.jpg?1375548116","large":{"permalink":"http://disqus.com/api/users/avatars/geeksforgeeks.jpg","cache":"//a.disquscdn.com/uploads/users/6561/9083/avatar92.jpg?1375548116"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"@All Thanks for your inputs.  We have updated the code for insertion.","createdAt":"2016-03-02T18:07:20","id":"2547781454","thread":"2898975054","numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>@All Thanks for your inputs.  We have updated the code for insertion.\u003c/p>","isSpam":false,"isHighlighted":true,"points":0}}},"order":"popular"}</script>
+
+    
+
+    <div id="fixed-content"></div>
+
+
+    
+        
+<script type="text/json" id="disqus-urls">{
+    "root":"//disqus.com",
+    "next":"//a.disquscdn.com/next/current/embed"
+}</script>
+
+        <script src="./lounge.load.6202b0dcdb29e539a797dd07893bbeac.js" id="bootstrap-script" data-app="lounge" async=""></script>
+    
+
+
+<div id="layout" data-tracking-area="layout">
+
+<div id="onboard" data-tracking-area="onboard"></div>
+
+<div id="highlighted-post" data-tracking-area="highlighted" class="highlighted-post"><h2 class="highlighted-comment-header">Featured Comment</h2>
+<ul class="post-list"><li class="post highlighted"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/geeksforgeeks/" class="user" data-action="profile" data-username="geeksforgeeks">
+<img data-role="user-avatar" data-user="65619083" src="./avatar92.jpg" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/geeksforgeeks/" data-action="profile" data-username="geeksforgeeks" data-role="username">GeeksforGeeks</a></span>
+<span class="badge moderator">Mod</span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://quiz.geeksforgeeks.org/c-program-red-black-tree-insertion/#comment-2547781454" data-role="relative-time" class="time-ago" title="Wednesday, March 2, 2016 11:37 PM">
+5 months ago
+</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>@All Thanks for your inputs.  We have updated the code for insertion.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/164vsr2" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2547781454">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li></ul>
+</div>
+
+<div id="global-alert"></div>
+
+<header id="main-nav" data-tracking-area="main-nav">
+<nav class="nav nav-primary">
+<ul>
+<li class="nav-tab nav-tab--primary tab-conversation active" data-role="post-count"><a class="publisher-nav-color">
+<span class="comment-count">
+20 comments
+</span>
+
+<span class="comment-count-placeholder">
+Comments
+</span>
+</a>
+</li>
+<li class="nav-tab nav-tab--primary tab-community">
+<a href="https://disqus.com/home/forums/geeksquiz/" class="publisher-nav-color" data-action="community-sidebar" data-forum="geeksquiz" id="community-tab">
+<span class="community-name">
+<strong>GeeksQuiz</strong>
+
+</span>
+
+<strong class="community-name-placeholder">Community</strong>
+</a>
+</li>
+<li class="nav-tab nav-tab--primary dropdown user-menu" data-role="logout"><a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="dropdown-toggle" data-toggle="dropdown">
+<span class="dropdown-toggle-wrapper">
+
+<span>
+Login
+</span>
+
+</span> <span class="caret"></span>
+</a>
+<ul class="dropdown-menu">
+
+
+<li>
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="auth:disqus">Disqus</a>
+</li>
+<li>
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="auth:facebook">Facebook</a>
+</li>
+<li>
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="auth:twitter">Twitter</a>
+</li>
+<li>
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="auth:google">Google</a>
+</li>
+
+
+
+</ul>
+</li>
+<li class="nav-tab nav-tab--primary notification-menu unread" data-role="notification-menu"><a href="https://disqus.com/home/inbox/" class="notification-container" data-action="home" data-home-path="home/inbox/">
+<span class="notification-icon icon-comment" aria-hidden=""></span>
+<span class="notification-count" data-role="notification-count">1</span>
+</a>
+</li>
+</ul>
+</nav>
+</header>
+
+<section id="conversation" data-role="main" data-tracking-area="main">
+<div class="nav nav-secondary" data-tracking-area="secondary-nav">
+<ul>
+<li id="recommend-button" class="nav-tab nav-tab--secondary recommend dropdown">
+<div class="thread-likes"><a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="recommend" title="Recommend this discussion" class="dropdown-toggle ">
+<span class="icon-heart"></span>
+<span class="label label-default">Recommend</span>
+<span class="label label-recommended">Recommended</span>
+<span class="label label-count">4</span>
+</a>
+<ul class="dropdown-menu dropdown-menu--coachmark">
+<li>
+<h2 class="coachmark__heading">Discussion Recommended!</h2>
+<p class="coachmark__description">Recommending means this is a discussion worth sharing. It gets shared to your followers' Disqus feeds, and gives the creator kudos!</p>
+<a href="http://disqus.com/home/?utm_source=disqus_embed&amp;utm_content=recommend_btn" class="btn btn-primary coachmark__button" target="_blank">
+ Find More Discussions 
+</a>
+</li>
+</ul>
+</div></li>
+<li id="thread-share-menu" class="nav-tab nav-tab--secondary dropdown share-menu hidden-sm"><a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="dropdown-toggle" data-toggle="dropdown" title="Share">
+<span class="icon-export"></span>
+<span class="label">Share</span>
+</a>
+<ul class="share-menu dropdown-menu">
+<li>
+<div class="share-menu__label">Share this discussion on</div>
+<ul>
+<li class="twitter">
+<a data-action="share:twitter" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#">Twitter</a>
+</li>
+<li class="facebook">
+<a data-action="share:facebook" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#">Facebook</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-role="post-sort" class="nav-tab nav-tab--secondary dropdown sorting pull-right">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="dropdown-toggle" data-toggle="dropdown">
+Sort by Best
+
+
+<span class="caret"></span>
+</a>
+<ul class="dropdown-menu pull-right">
+<li class="selected">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="sort" data-sort="popular">Best<i aria-hidden="true" class="icon-checkmark"></i></a>
+</li>
+
+<li>
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="sort" data-sort="desc">Newest<i aria-hidden="true" class="icon-checkmark"></i></a>
+</li>
+
+<li>
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="sort" data-sort="asc">Oldest<i aria-hidden="true" class="icon-checkmark"></i></a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div id="posts">
+<div id="form" class="textarea-wrapper--top-level"><form class="reply">
+<div class="postbox">
+<div role="alert"></div>
+<div class="avatar">
+<span class="user">
+<img data-role="user-avatar" src="./noavatar92.7b2fde640943965cc88df0cdee365907.png" alt="Avatar">
+</span>
+</div>
+
+<div class="textarea-wrapper" data-role="textarea" dir="auto"><div><span class="placeholder">Join the discussion…</span><div class="textarea" tabindex="0" role="textbox" aria-multiline="true" contenteditable="PLAINTEXT-ONLY" data-role="editable" aria-label="Join the discussion…" style="overflow: auto; max-height: 350px;"><p><br></p></div><div style="display: none;"><ul class="user-mention__list">
+<li class="header user-mention__header">
+<h5>in this conversation</h5>
+</li>
+</ul>
+</div></div>
+<div data-role="drag-drop-placeholder" class="media-drag-hover" style="display: none">
+<div class="drag-text">
+⬇ Drag and drop your images here to upload them.
+</div>
+</div>
+<div class="edit-alert" role="postbox-alert"></div>
+<div class="post-actions">
+<ul class="wysiwyg">
+</ul>
+</div>
+</div>
+
+<div data-role="login-form"><div><section class="auth-section logged-out">
+<div class="connect">
+<h6>Log in with</h6>
+<ul data-role="login-menu" class="services login-buttons">
+
+<li class="auth-disqus">
+<button type="button" data-action="auth:disqus" title="Disqus" class="connect__button"><i class="icon-disqus"></i></button>
+</li>
+<li class="auth-facebook">
+<button type="button" data-action="auth:facebook" title="Facebook" class="connect__button"><i class="icon-facebook-circle"></i></button>
+</li>
+<li class="auth-twitter">
+<button type="button" data-action="auth:twitter" title="Twitter" class="connect__button"><i class="icon-twitter-circle"></i></button>
+</li>
+<li class="auth-google">
+<button type="button" data-action="auth:google" title="Google" class="connect__button"><i class="icon-google-plus-circle"></i></button>
+</li>
+</ul>
+</div>
+<div class="guest">
+<h6 class="guest-form-title">
+<span class="register-text"> or sign up with Disqus </span>
+<span class="guest-text"> or pick a name </span>
+</h6>
+
+<div class="help-tooltip__wrapper help-icon">
+<div id="rules" class="tooltip show help-tooltip">
+<h3 class="help-tooltip__heading">Disqus is a discussion network</h3>
+<ul class="help-tooltip__list">
+<li><span>Disqus never moderates or censors. The rules on this community are its own.</span></li>
+<li><span>Your email is safe with us. It's only used for moderation and optional notifications.</span></li>
+<li><span>Don't be a jerk or do anything illegal. Everything is easier that way.</span></li>
+</ul>
+<p class="clearfix"><a href="https://docs.disqus.com/kb/terms-and-policies/" class="btn btn-small help-tooltip__button" target="_blank">Read full terms and conditions</a></p>
+</div>
+</div>
+
+<p class="input-wrapper">
+<input dir="auto" type="text" placeholder="Name" name="display_name" id="view85_display_name" maxlength="30" class="input--text">
+</p>
+
+<div class="guest-details " data-role="guest-details">
+<p class="input-wrapper">
+<input dir="auto" type="email" placeholder="Email" name="email" id="view85_email" class="input--text">
+</p>
+
+<p class="input-wrapper">
+<input dir="auto" type="password" class="register-text input--text" placeholder="Password" name="password" id="view85_password">
+</p>
+
+<div class="acceptance-wrapper register-text">
+By signing up, you agree to the Disqus <a target="_blank" href="https://help.disqus.com/customer/portal/articles/1753105-basic-rules-for-disqus-powered-profiles-and-discussions">Basic Rules</a>, <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466260-terms-of-service">Terms of Service</a>, and <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466259-privacy-policy">Privacy Policy</a>.
+</div>
+<div class="acceptance-wrapper guest-text">
+By posting, you agree to the Disqus <a target="_blank" href="https://help.disqus.com/customer/portal/articles/1753105-basic-rules-for-disqus-powered-profiles-and-discussions">Basic Rules</a>, <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466260-terms-of-service">Terms of Service</a>, and <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466259-privacy-policy">Privacy Policy</a>.
+</div>
+
+<div class="guest-checkbox">
+<label>
+<input type="checkbox" name="author-guest">
+I'd rather post as a guest
+</label>
+</div>
+
+<div class="proceed" data-role="submit-btn-container">
+<button type="submit" class="proceed__button btn submit" aria-label="Post"><span class="icon-proceed"></span><div class="spinner"></div></button>
+<button type="submit" class="proceed__button btn next" aria-label="Next"><span class="icon-proceed"></span><div class="spinner"></div></button>
+</div>
+</div>
+</div>
+</section>
+
+</div></div>
+</div>
+</form></div>
+
+<button class="alert alert--realtime" style="display: none" data-role="realtime-notification">
+</button>
+
+<div id="no-posts" style="display:none"></div>
+
+<ul id="post-list" class="post-list"><li class="post" id="post-1747314390"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/disqus_zDSf2bUm4M/" class="user" data-action="profile" data-username="disqus_zDSf2bUm4M">
+<img data-role="user-avatar" data-user="121769744" src="./avatar92(1).jpg" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/disqus_zDSf2bUm4M/" data-action="profile" data-username="disqus_zDSf2bUm4M" data-role="username">Dinesh Khandelwal</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://quiz.geeksforgeeks.org/c-program-red-black-tree-insertion/#comment-1747314390" data-role="relative-time" class="time-ago" title="Thursday, December 18, 2014 1:54 AM">2 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>The above code fails for many cases. Eg : 15, 8, 10, 12, 18, 25, 20.</p><p>Working C++ Code : <a href="http://ideone.com/PvEzCI" rel="nofollow">http://ideone.com/PvEzCI</a></p><p>[Let me know if you find any bug in the program]</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="vote-up  count-4" data-action="upvote" title="">
+
+<span class="updatable count" data-role="likes">4</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/swb0eu" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:1747314390">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2400976270"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/haochen_liu/" class="user" data-action="profile" data-username="haochen_liu">
+<img data-role="user-avatar" data-user="182007950" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/haochen_liu/" data-action="profile" data-username="haochen_liu" data-role="username">Haochen Liu</a></span>
+
+<span><a href="http://quiz.geeksforgeeks.org/c-program-red-black-tree-insertion/#comment-1747314390" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Dinesh Khandelwal</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://quiz.geeksforgeeks.org/c-program-red-black-tree-insertion/#comment-2400976270" data-role="relative-time" class="time-ago" title="Wednesday, December 9, 2015 2:12 PM">8 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Would you please provide the removal as well? Thanks!</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/13ph95a" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2400976270">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li></ul>
+
+</li><li class="post" id="post-2526194194"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/grb47/" class="user" data-action="profile" data-username="grb47">
+<img data-role="user-avatar" data-user="145292297" src="./avatar92(2).jpg" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/grb47/" data-action="profile" data-username="grb47" data-role="username">wilson</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://quiz.geeksforgeeks.org/c-program-red-black-tree-insertion/#comment-2526194194" data-role="relative-time" class="time-ago" title="Sunday, February 21, 2016 1:08 PM">6 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p><a href="https://ideone.com/bOItb5" rel="nofollow">https://ideone.com/bOItb5</a><br>after some correction  ,in given code this one is correct code</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="vote-up  count-1" data-action="upvote" title="">
+
+<span class="updatable count" data-role="likes">1</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/15s13wy" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2526194194">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li class="post" id="post-1673439182"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar">
+<div class="user"><img src="./noavatar92.png" class="user" alt="Avatar"></div>
+</div>
+
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author">AA</span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://quiz.geeksforgeeks.org/c-program-red-black-tree-insertion/#comment-1673439182" data-role="relative-time" class="time-ago" title="Monday, November 3, 2014 2:01 PM">2 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Consider the case when Uncle is not present(NULL)...some minor changes will do...<br>...................<br>// (ii) Change color of grandparent as RED</p><p>		// (iii) Move z to grandparent</p><p>		if (y != NULL &amp;&amp; y-&gt;color == 'R')</p><p>		{</p><p>			y-&gt;color = 'B';<br>..............</p><p>and change statements inside else block to if...else if...else if...else if...</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="vote-up  count-1" data-action="upvote" title="">
+
+<span class="updatable count" data-role="likes">1</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/roblxq" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:1673439182">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li class="post" id="post-2751088379"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/disqus_AjfnriTUc7/" class="user" data-action="profile" data-username="disqus_AjfnriTUc7">
+<img data-role="user-avatar" data-user="210107695" src="./avatar92(3).jpg" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/disqus_AjfnriTUc7/" data-action="profile" data-username="disqus_AjfnriTUc7" data-role="username">Abhishek Thakur</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://quiz.geeksforgeeks.org/c-program-red-black-tree-insertion/#comment-2751088379" data-role="relative-time" class="time-ago" title="Sunday, June 26, 2016 1:30 PM">a month ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>why are we doing the following  <br>pt = parent_pt<br>parent_pt = pt-&gt;parent<br>???<br>is it just to travel up the tree to ensure it is not violating any redblack property.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/19hxddn" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2751088379">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2812143341"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/bhavikgujarati/" class="user" data-action="profile" data-username="bhavikgujarati">
+<img data-role="user-avatar" data-user="189099044" src="./avatar92(4).jpg" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/bhavikgujarati/" data-action="profile" data-username="bhavikgujarati" data-role="username">bhavik gujarati</a></span>
+
+<span><a href="http://quiz.geeksforgeeks.org/c-program-red-black-tree-insertion/#comment-2751088379" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Abhishek Thakur</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://quiz.geeksforgeeks.org/c-program-red-black-tree-insertion/#comment-2812143341" data-role="relative-time" class="time-ago" title="Saturday, July 30, 2016 10:40 PM">10 days ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>No, it's for handling subsequent lines outside if, specifically, swapping of colors and pt = parent_pt.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/1ai9zot" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2812143341">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li></ul>
+
+</li><li class="post" id="post-2750042207"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/disqus_AjfnriTUc7/" class="user" data-action="profile" data-username="disqus_AjfnriTUc7">
+<img data-role="user-avatar" data-user="210107695" src="./avatar92(3).jpg" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/disqus_AjfnriTUc7/" data-action="profile" data-username="disqus_AjfnriTUc7" data-role="username">Abhishek Thakur</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://quiz.geeksforgeeks.org/c-program-red-black-tree-insertion/#comment-2750042207" data-role="relative-time" class="time-ago" title="Saturday, June 25, 2016 8:32 PM">2 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>how come this code is making new node red ??<br>Since node constructor is not initializing bool color. So, how can we be sure that new node is red ??</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/19hay5b" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2750042207">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2812146427"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/bhavikgujarati/" class="user" data-action="profile" data-username="bhavikgujarati">
+<img data-role="user-avatar" data-user="189099044" src="./avatar92(4).jpg" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/bhavikgujarati/" data-action="profile" data-username="bhavikgujarati" data-role="username">bhavik gujarati</a></span>
+
+<span><a href="http://quiz.geeksforgeeks.org/c-program-red-black-tree-insertion/#comment-2750042207" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Abhishek Thakur</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://quiz.geeksforgeeks.org/c-program-red-black-tree-insertion/#comment-2812146427" data-role="relative-time" class="time-ago" title="Saturday, July 30, 2016 10:43 PM">10 days ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>bool is, by default, initialized to 0 which is corresponding to "RED" in enum.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/1aia22j" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2812146427">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li></ul>
+
+</li><li class="post" id="post-2722199769"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/shivammitra/" class="user" data-action="profile" data-username="shivammitra">
+<img data-role="user-avatar" data-user="162609206" src="./avatar92(5).jpg" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/shivammitra/" data-action="profile" data-username="shivammitra" data-role="username">Shivam Mitra</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://quiz.geeksforgeeks.org/c-program-red-black-tree-insertion/#comment-2722199769" data-role="relative-time" class="time-ago" title="Friday, June 10, 2016 1:49 AM">2 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Recursive implementation:<br><a href="http://ideone.com/9Hd3Mp" rel="nofollow">http://ideone.com/9Hd3Mp</a></p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/190q6s9" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2722199769">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li class="post highlighted" id="post-2547781454"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/geeksforgeeks/" class="user" data-action="profile" data-username="geeksforgeeks">
+<img data-role="user-avatar" data-user="65619083" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/geeksforgeeks/" data-action="profile" data-username="geeksforgeeks" data-role="username">GeeksforGeeks</a></span>
+<span class="badge moderator">Mod</span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://quiz.geeksforgeeks.org/c-program-red-black-tree-insertion/#comment-2547781454" data-role="relative-time" class="time-ago" title="Wednesday, March 2, 2016 11:37 PM">5 months ago</a>
+</span>
+
+<span class="state-byline state-byline-default">
+<span class="icon-mobile icon-trophy" aria-hidden="true"></span>
+<span class="text">
+Featured by GeeksQuiz
+</span>
+</span>
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>@All Thanks for your inputs.  We have updated the code for insertion.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/164vsr2" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2547781454">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li class="post" id="post-2546848861"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/shashankmudlapur/" class="user" data-action="profile" data-username="shashankmudlapur">
+<img data-role="user-avatar" data-user="198850859" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/shashankmudlapur/" data-action="profile" data-username="shashankmudlapur" data-role="username">Shashank Mudlapur</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://quiz.geeksforgeeks.org/c-program-red-black-tree-insertion/#comment-2546848861" data-role="relative-time" class="time-ago" title="Wednesday, March 2, 2016 11:47 AM">5 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Code not working for ascending order or descending order insertion</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/164bt5p" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2546848861">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li class="post" id="post-2271117444"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/disqus_M7N39xkive/" class="user" data-action="profile" data-username="disqus_M7N39xkive">
+<img data-role="user-avatar" data-user="134197106" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/disqus_M7N39xkive/" data-action="profile" data-username="disqus_M7N39xkive" data-role="username">rajdeep</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://quiz.geeksforgeeks.org/c-program-red-black-tree-insertion/#comment-2271117444" data-role="relative-time" class="time-ago" title="Thursday, September 24, 2015 2:23 PM">a year ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Bug in the code:(corrected code)<br>corrections are followed by //correction comment<br> <a href="http://ideone.com/Z7PoOy" rel="nofollow">http://ideone.com/Z7PoOy</a></p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/11k5xfo" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2271117444">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2513880682"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar">
+<div class="user"><img src="./noavatar92.png" class="user" alt="Avatar"></div>
+</div>
+
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author">david</span>
+
+<span><a href="http://quiz.geeksforgeeks.org/c-program-red-black-tree-insertion/#comment-2271117444" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> rajdeep</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://quiz.geeksforgeeks.org/c-program-red-black-tree-insertion/#comment-2513880682" data-role="relative-time" class="time-ago" title="Monday, February 15, 2016 5:46 AM">6 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>on line 136 you added a continue statement without a //correction comment</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/15kp6qy" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2513880682">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li></ul>
+
+</li><li class="post" id="post-2111016174"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/saiyaswanth/" class="user" data-action="profile" data-username="saiyaswanth">
+<img data-role="user-avatar" data-user="121988825" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/saiyaswanth/" data-action="profile" data-username="saiyaswanth" data-role="username">sai</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://quiz.geeksforgeeks.org/c-program-red-black-tree-insertion/#comment-2111016174" data-role="relative-time" class="time-ago" title="Wednesday, July 1, 2015 11:54 PM">a year ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>in order for the code at all test cases,Just make the following modification</p><p>if(y==NULL)</p><p>            {</p><p>                z-&gt;parent-&gt;color='B';</p><p>                z-&gt;parent-&gt;parent-&gt;color='R';</p><p>                z= z-&gt;parent-&gt;parent;</p><p>            }</p><p>            else if(y-&gt;color=='R')</p><p>            {</p><p>                y-&gt;color='B';</p><p>                z-&gt;parent-&gt;color='B';</p><p>                z-&gt;parent-&gt;parent-&gt;color='R';</p><p>                z= z-&gt;parent-&gt;parent;</p><p>            }</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/ywuei6" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2111016174">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li class="post" id="post-2096091313"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/KlausMikelson/" class="user" data-action="profile" data-username="KlausMikelson">
+<img data-role="user-avatar" data-user="87632628" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/KlausMikelson/" data-action="profile" data-username="KlausMikelson" data-role="username">Klaus</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://quiz.geeksforgeeks.org/c-program-red-black-tree-insertion/#comment-2096091313" data-role="relative-time" class="time-ago" title="Wednesday, June 24, 2015 12:34 PM">a year ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p><a href="http://ideone.com/SBi3ho" rel="nofollow">http://ideone.com/SBi3ho</a> This is iterative code for the same.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/ynyiep" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2096091313">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li class="post" id="post-1746424443"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/mithunv/" class="user" data-action="profile" data-username="mithunv">
+<img data-role="user-avatar" data-user="87611069" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/mithunv/" data-action="profile" data-username="mithunv" data-role="username">Mithun V</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://quiz.geeksforgeeks.org/c-program-red-black-tree-insertion/#comment-1746424443" data-role="relative-time" class="time-ago" title="Wednesday, December 17, 2014 3:57 PM">2 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>The source code is not working for 3 elements , i mean any three node insertion.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/svrxq3" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:1746424443">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li class="post" id="post-1746380013"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/mithunv/" class="user" data-action="profile" data-username="mithunv">
+<img data-role="user-avatar" data-user="87611069" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/mithunv/" data-action="profile" data-username="mithunv" data-role="username">Mithun V</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://quiz.geeksforgeeks.org/c-program-red-black-tree-insertion/#comment-1746380013" data-role="relative-time" class="time-ago" title="Wednesday, December 17, 2014 2:48 PM">2 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Please insert 13 , 8 and 11. i am getting segmentation fault for this one</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/svqzfx" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:1746380013">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li class="post" id="post-1673392522"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar">
+<div class="user"><img src="./noavatar92.png" class="user" alt="Avatar"></div>
+</div>
+
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author">Aj</span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://quiz.geeksforgeeks.org/c-program-red-black-tree-insertion/#comment-1673392522" data-role="relative-time" class="time-ago" title="Monday, November 3, 2014 12:38 PM">2 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Fails for decreasing order insert....10,9,8,7,6,5,4,3,2,1</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/roalxm" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:1673392522">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li class="post" id="post-1656955421"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar">
+<div class="user"><img src="./noavatar92.png" class="user" alt="Avatar"></div>
+</div>
+
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author">Maniak</span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://quiz.geeksforgeeks.org/c-program-red-black-tree-insertion/#comment-1656955421" data-role="relative-time" class="time-ago" title="Tuesday, October 28, 2014 8:21 AM">2 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>According to the CLRS book's algorithm, the rotate left function described in here is wrong. The correct is compare y-&gt;left with NULL and not x-&gt;left.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/reiazh" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:1656955421">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li class="post" id="post-1602422509"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/svnvs/" class="user" data-action="profile" data-username="svnvs">
+<img data-role="user-avatar" data-user="123064413" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/svnvs/" data-action="profile" data-username="svnvs" data-role="username">svnvs</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://quiz.geeksforgeeks.org/c-program-red-black-tree-insertion/#comment-1602422509" data-role="relative-time" class="time-ago" title="Wednesday, September 24, 2014 12:12 AM">2 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>There seems to a bug in the "insert" method when a duplicate element is passed to it.</p><p>Consider the below scenario, the current tree looks like<br>  3<br> /<br>2<br>Now, when you insert 3 again, the left subtree i.e. 2 seems to be overwritten.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/qi1h4d" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:1602422509">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li></ul>
+
+<div class="load-more" data-role="more" style="display:none">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" data-action="more-posts" class="btn load-more__button">Load more comments</a>
+</div>
+</div>
+
+</section>
+
+<div id="placement-bottom" data-tracking-area="discovery-south"><div class="post-list" style="height: 0px; visibility: hidden;"></div></div>
+
+<div id="footer" data-tracking-area="footer" class="disqus-footer__wrapper">
+<ul class="disqus-footer">
+<li class="disqus-footer__logo"><a href="https://disqus.com/" rel="nofollow" title="Powered by Disqus" class="disqus-footer__link">Powered by Disqus</a></li>
+<li id="thread-subscribe-button" class="email disqus-footer__item"> 
+<div class="default">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=6202b0dcdb29e539a797dd07893bbeac&amp;f=geeksquiz&amp;t_i=13107%20http%3A%2F%2Fquiz.geeksforgeeks.org%2F%3Fp%3D13107&amp;t_u=http%3A%2F%2Fquiz.geeksforgeeks.org%2Fc-program-red-black-tree-insertion%2F&amp;t_e=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_d=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;t_t=C%20Program%20for%20Red%20Black%20Tree%20Insertion&amp;s_o=default&amp;l=#" rel="nofollow" data-action="subscribe" title="Subscribe and get email updates from this discussion" class="disqus-footer__link"><i aria-hidden="true" class="icon icon-mail"></i><span class="clip">Subscribe</span> <i aria-hidden="true" class="icon icon-checkmark"></i></a>
+</div>
+<div class="form">
+<div class="input-wrapper"><input id="thread-subscribe-email" type="email" placeholder="yourname@email.com" class="disqus-footer__input input--text"></div>
+</div>
+</li>
+<li class="install disqus-footer__item">
+<a href="https://publishers.disqus.com/engage?utm_source=geeksquiz&amp;utm_medium=Disqus-Footer" rel="nofollow" target="_blank" class="disqus-footer__link">
+<i aria-hidden="true" class="icon icon-disqus"></i>
+<span class="clip hidden-sm">Add Disqus to your site</span>
+<span class="clip visible-sm hidden-xs">Add Disqus</span>
+<span class="clip visible-xs">Add</span>
+</a>
+</li>
+<li class="privacy disqus-footer__item">
+<a href="https://help.disqus.com/customer/portal/articles/1657951?utm_source=disqus&amp;utm_medium=embed-footer&amp;utm_content=privacy-btn" rel="nofollow" target="_blank" class="disqus-footer__link">
+<i aria-hidden="true" class="icon icon-lock"></i>
+<span class="clip">Privacy</span>
+</a>
+</li>
+</ul>
+</div>
+</div><img src="./23096" style="display: none;"><img src="./saved_resource" style="display: none;"><img src="./tpid=c6tr6a1n2g2rb5q" style="display: none;"><img src="./cm.gif" style="display: none;"><iframe src="./sync.html" style="display: none;"></iframe></body></html>
